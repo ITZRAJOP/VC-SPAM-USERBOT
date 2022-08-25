@@ -1,1 +1,9 @@
-
+pyrogram==1.4.16
+py-tgcalls==0.8.6
+TgCrypto
+python-dotenv
+requests
+aiohttp
+aiofiles
+asyncio
+wget
