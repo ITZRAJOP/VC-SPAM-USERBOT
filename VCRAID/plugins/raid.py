@@ -6,12 +6,12 @@
 # ---------------------------------IMPORT--------------------------
 
 import asyncio
-from config import HNDLR
-from VCRAID IMPORT bot, call_py
+from config import HNDLR, OWNER
+from VCRAID import bot, call_py
 from pytgcalls import StreamType
 from pyrogram.types import Message
 from pyrogram import Client, filters
-from VCRAID.helpers.queues import QUEUE, add_to_queue, get_queue
+from VCRAID.tgcalls.queues import QUEUE, add_to_queue, get_queue
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 
 
@@ -19,14 +19,14 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 
 #-------------------------------------CODES-------------------------
 
-@Client.on_message(filters.command(["mc"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.user(sudo_user) & filters.command(["mc"], [".", "!", "/"]))
 async def playfrom(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
         await m.delete()
         await bot.send_message(
-                          chat_id=OWNER_ID,
-                          "**USES:** /mc source chat_id example `/mc -1234567890`"           
+                OWNER,
+                "**USES:** /mc source chat_id example `/mc -1234567890`"           
         )
     else:
         args = m.text.split(maxsplit=1)[1]
@@ -37,7 +37,10 @@ async def playfrom(client, m: Message):
             chat = args
             limit = 10
             lmt = 9
-        blaze = await bot.send_message(chat_id=OWNER_ID, "**Vc Raid Starting With {limit} Audios From That Channel!**")
+        await bot.send_message(
+                OWNER,
+                "**Vc Raid Starting With {limit} Audios From That Channel!**"
+           )
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
                 location = await x.download()
@@ -57,9 +60,9 @@ async def playfrom(client, m: Message):
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     # await m.reply_to_message.delete()
                     await bot.send_message(
-                                           chat_id=OWNER_ID,
-                                           f"**Started Raid In**`{chat_id}` !"
+                            OWNER,
+                            f"**Started Raid In**`{chat_id}` !"
                     )
         except Exception as e:
-            await bot.send_message(chat_id=OWNER_ID, f"**ERROR** \n`{e}`")
+            await bot.send_message(OWNER, f"**ERROR** \n`{e}`")
 
