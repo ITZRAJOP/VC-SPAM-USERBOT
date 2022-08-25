@@ -1,6 +1,6 @@
 import asyncio
 from pytgcalls import idle
-from VCRAID import call_py
+from VCRAID import call_py, bot
 
 async def main():
     await call_py.start()
