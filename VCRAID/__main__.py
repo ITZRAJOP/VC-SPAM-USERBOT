@@ -4,7 +4,11 @@ from VCRAID import call_py, bot
 
 async def main():
     await call_py.start()
-    await bot.send_message(SUPPORT, "**VCRAID UserBot Successfully Deployed And Started**")
+    await bot.join_chat("TheDeadlyBots")
+    await bot.join_chat("TheBotUpdates")
+    await bot.send_message(
+            SUPPORT,
+            "<b>VCRAID UserBot Successfully Deployed And Started!</b>")
     print(
         """
     ------------------
