@@ -1,6 +1,7 @@
 import asyncio
 from pytgcalls import idle
 from VCRAID import call_py, bot
+from config import SUPPORT
 
 async def main():
     await call_py.start()
