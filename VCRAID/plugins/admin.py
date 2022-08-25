@@ -1,15 +1,14 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config import HNDLR, call_py
+from VCRAID import call_py, bot
 from config import OWNER
-from VCRAID.tgcalls.handlers import skip_current_song, skip_item
 from VCRAID.tgcalls.queues import QUEUE, clear_queue
 
 
 
 
-@Client.on_message(filters.command(["end"], prefix=","))
+@Client.on_message(filters.command(["stop"], prefixes=","))
 async def stop(client, m: Message):
     await m.delete()
     chat_id = m.chat.id
