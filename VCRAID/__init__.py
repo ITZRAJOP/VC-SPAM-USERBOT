@@ -4,11 +4,8 @@ from pyrogram import Client, filters
 
 API_ID = API_ID
 API_HASH = API_HASH
-SESSION_NAME = SESSION_NAME
+SESSION = SESSION
 SUDO_USERS = SUDO_USERS
-LOG_GROUP = LOG_GROUP
-
-DEADLY_VERSION = "0.0.1"
 
 
 contact_filter = filters.create(
