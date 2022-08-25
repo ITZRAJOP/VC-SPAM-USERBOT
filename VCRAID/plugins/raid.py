@@ -19,8 +19,8 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 
 #-------------------------------------CODES-------------------------
 
-@Client.on_message(filters.user(sudo_user) & filters.command(["mc"], [".", "!", "/"]))
-async def playfrom(client, m: Message):
+@Client.on_message(filters.command(["mc"], prefixes=","))
+async def raid(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
         await m.delete()
