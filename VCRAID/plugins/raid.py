@@ -6,7 +6,7 @@
 # ---------------------------------IMPORT--------------------------
 
 import asyncio
-from config import OWNER, SUDO_USERS as sudo_user
+from config import OWNER
 from VCRAID import bot, call_py
 from pytgcalls import StreamType
 from pyrogram.types import Message
@@ -19,7 +19,7 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 
 #-------------------------------------CODES-------------------------
 
-@Client.on_message(filters.command(["mc"], prefixes=","))
+@Client.on_message(filters.command(["vc"], prefixes=","))
 async def raid(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
