@@ -6,7 +6,7 @@
 # ---------------------------------IMPORT--------------------------
 
 import asyncio
-from config import HNDLR, OWNER
+from config import OWNER, SUDO_USERS as sudo_user
 from VCRAID import bot, call_py
 from pytgcalls import StreamType
 from pyrogram.types import Message
