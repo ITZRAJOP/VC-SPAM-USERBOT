@@ -2,6 +2,8 @@
 
  [Telegram](https://web.telegram.org/) Userbot To Abuse In Group Voice Chat For Clan Fights
 
+For Any Assistant Join [Support Chat](https://t.me/TheDeadlyBots)
+
 ## HOSTING
 
 ### DEPLOY TO VPS 🚀
