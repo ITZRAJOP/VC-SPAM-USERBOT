@@ -12,7 +12,8 @@
 
 `bash start`
 
-Please note Your vps must have nodejs installed if not then checkout.    [how to install nodejs to vps](https://techviewleo.com/how-to-install-node-js-18-lts-on-ubuntu/) 
+Please note Your vps must have nodejs installed if not then checkout.  
+  [how to install nodejs to vps](https://techviewleo.com/how-to-install-node-js-18-lts-on-ubuntu/) 
 
 ### VARS
 
