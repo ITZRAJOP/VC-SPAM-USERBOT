@@ -4,8 +4,9 @@
 
 ## HOSTING
 
-### DEPLOY TO HEROKU 🚀
+### DEPLOY TO VPS 🚀
 
+`git clone https://github.com/Team-Deadly/VC-SPAM-USERBOT && cd VC-SPAM-USERBOT` 
 
 ### VARS
 
