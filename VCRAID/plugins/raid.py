@@ -26,7 +26,7 @@ async def raid(client, m: Message):
         await m.delete()
         await bot.send_message(
                 OWNER,
-                "**USES:** /mc source chat_id example `/mc -1234567890`"           
+                "**USES:** /vc source chat_id example `/vc -1234567890`"           
         )
     else:
         args = m.text.split(maxsplit=1)[1]
@@ -39,7 +39,7 @@ async def raid(client, m: Message):
             lmt = 9
         await bot.send_message(
                 OWNER,
-                "**Vc Raid Starting With {limit} Audios From That Channel!**"
+                f"**Vc Raid Starting With {limit} Audios From That Channel!**"
            )
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
